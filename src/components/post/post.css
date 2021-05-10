@@ -1,0 +1,45 @@
+.post-title {
+  text-align: center;
+  /* margin-top: 15px; */
+  padding-top: 75px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid rgb(64, 197, 64);
+  border-radius: 5px;
+}
+
+.post-title-header {
+  font-size: 20px;
+}
+
+.post-title-body {
+  font-size: 40px;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.tui-viewer {
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.tui-viewer h1 {
+  font-size: 45px;
+}
+
+.tui-viewer h2 {
+  font-size: 40px;
+}
+
+.tui-viewer h3 {
+  font-size: 35px;
+}
+
+.tui-viewer pre code {
+  font-size: 15px;
+}
+
+.tui-viewer * {
+  font-family: 'Jua';
+  font-size: 20px;
+}

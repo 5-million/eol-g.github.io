@@ -1,0 +1,70 @@
+#sidebar {
+  display: none;
+  margin-top: 60px;
+  width: 300px;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  animation-duration: 1s;
+  animation-name: slide;
+}
+
+@keyframes slide {
+  from {
+    margin-left: -300px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+.sidebar-menu {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.sidebar-menu-title {
+  font-family: 'Jua';
+  margin-left: 10px;
+}
+
+.category-list {
+  list-style: none;
+  font-size: 20px;
+}
+
+.category-item > a {
+  color: black;
+}
+
+.sidebar-footer {
+  position: fixed;
+  width: inherit;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+
+  animation-duration: 1s;
+  animation-name: slide;
+}
+
+.sidebar-footer .github-icon {
+  width: max-content;
+  margin: auto;
+}
+
+.sidebar-footer .github-icon a {
+  color: black;
+}
+
+.sidebar-footer .github-icon a:hover {
+  color: rgb(64, 197, 64);
+}
+
+/* .categories {
+  width: 150px;
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+} */

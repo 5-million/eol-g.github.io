@@ -1,0 +1,40 @@
+.post-list {
+  list-style: none;
+  padding-top: 80px;
+}
+
+.post-item {
+  margin-bottom: 40px;
+}
+
+.post-list > .post-item > a > .post-card:hover {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.post-item > a {
+  color: black;
+}
+
+.post-item > a :hover {
+  color: black;
+}
+
+.post-card {
+  position: relative;
+  padding-left: 10px;
+  border-left: 5px solid rgb(64, 197, 64);
+  /* border-bottom: 1px solid gray; */
+  border-radius: 3px;
+}
+
+.post-card .post-card-header {
+  font-size: 20px;
+}
+
+.post-card .post-card-body {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}

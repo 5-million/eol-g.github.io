@@ -1,0 +1,34 @@
+.navbar {
+  background-color: #e9ecef;
+  border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+.navbar-fix {
+  position: fixed;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 20px;
+  cursor: pointer;
+}
+
+.sidebar-toggle :hover {
+  color: rgb(64, 197, 64);
+}
+
+.sidebar-toggle :active {
+  color: #0062cc;
+}
+
+.blog-title {
+  margin: auto;
+  font-size: 30px;
+  color: black;
+}
+
+/* #sidebar-toggle-btn :active {
+  box-shadow: 1px 1px 0 rgb(0, 0, 0, 0.5);
+  position: relative;
+  top: 1px;
+} */
