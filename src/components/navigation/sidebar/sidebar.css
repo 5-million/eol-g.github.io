@@ -1,5 +1,5 @@
 #sidebar {
-  display: none;
+  z-index: 5;
   margin-top: 60px;
   width: 300px;
   background-color: rgb(245, 245, 245);
@@ -18,13 +18,22 @@
   }
 }
 
+@keyframes reverse_slide {
+  from {
+    margin-left: 300px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
 .sidebar-menu {
   width: 100%;
   margin-top: 20px;
 }
 
 .sidebar-menu-title {
-  font-family: 'Jua';
+  font-family: "Jua";
   margin-left: 10px;
 }
 

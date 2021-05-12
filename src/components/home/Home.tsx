@@ -1,239 +1,55 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock } from '@fortawesome/free-regular-svg-icons';
+import React, { useEffect, useState } from "react";
+import axios, { AxiosResponse } from "axios";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
 
-import './home.css';
+import { Posts } from "../../interfaces";
+
+import "./home.css";
 
 const Home: React.FC = () => {
+  const [posts, setPosts] = useState<Posts[] | null>(null);
+
+  useEffect(() => {
+    axios.get("http://localhost:8080/posts").then((response: AxiosResponse) => {
+      const data: Posts[] | null = response?.data;
+      setPosts(data);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
       <div className="container">
         <ul className="post-list">
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
-          <li className="post-item">
-            <Link to="#">
-              <div className="post-card">
-                <div className="post-card-header">📎 CATEGORY</div>
-                <div className="post-card-body">POST SUBJECTPOST SUBJECTPOST SUBJECTPOST SUBJECTPOST</div>
-                <div className="post-card-footer">
-                  <div className="upload-date">
-                    <FontAwesomeIcon icon={faClock} />
-                    &nbsp;2021-05-06
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </li>
+          {posts == null
+            ? null
+            : posts.map(
+                (
+                  { id, category, subject, uploadDate, status }: Posts,
+                  index: number
+                ) => {
+                  return (
+                    <li className="post-item" key={index}>
+                      <Link to={`/posts/${id}`}>
+                        <div className="post-card">
+                          <div className="post-card-header">
+                            📎 {category.toUpperCase()}
+                          </div>
+                          <div className="post-card-body">{subject}</div>
+                          <div className="post-card-footer">
+                            <div className="upload-date">
+                              <FontAwesomeIcon icon={faClock} />
+                              &nbsp;{uploadDate}
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    </li>
+                  );
+                }
+              )}
         </ul>
       </div>
     </>

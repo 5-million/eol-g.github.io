@@ -1,37 +1,45 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import React, { useEffect, useState } from "react";
+import axios, { AxiosResponse } from "axios";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import './sidebar.css';
+import "./sidebar.css";
 
 const Sidebar: React.FC = () => {
+  const [categories, setCategories] = useState<string[] | null>(null);
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/category")
+      .then((response: AxiosResponse) => {
+        const data: string[] | null = response?.data;
+        setCategories(data);
+      });
+  }, []);
+
   return (
     <>
-      <div className="w3-sidebar w3-bar-block w3-border-right" id="sidebar">
+      <div
+        className="w3-sidebar w3-bar-block w3-border-righ sidebar-none"
+        id="sidebar"
+      >
         <div className="sidebar-menu">
           <div className="categories">
             <h2 className="sidebar-menu-title">📎 Categories</h2>
             <ul className="category-list">
-              <li className="category-item">
-                <Link to="#">
-                  <FontAwesomeIcon icon={faChevronRight} />
-                  &nbsp;SPRING
-                </Link>
-              </li>
-              <li className="category-item">
-                <Link to="#">
-                  <FontAwesomeIcon icon={faChevronRight} />
-                  &nbsp;language
-                </Link>
-              </li>
-              <li className="category-item">
-                <Link to="#">
-                  <FontAwesomeIcon icon={faChevronRight} />
-                  &nbsp;DevOps
-                </Link>
-              </li>
+              {categories == null
+                ? null
+                : categories.map((category, index) => {
+                    return (
+                      <li className="category-item" key={index}>
+                        <Link to={`/category/${category}`}>
+                          <FontAwesomeIcon icon={faChevronRight} />
+                          &nbsp;{category.toUpperCase()}
+                        </Link>
+                      </li>
+                    );
+                  })}
             </ul>
           </div>
         </div>
