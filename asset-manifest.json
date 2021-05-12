@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/blog-react-client/static/css/main.72d1d98f.chunk.css",
-    "main.js": "/blog-react-client/static/js/main.a664b2a5.chunk.js",
-    "main.js.map": "/blog-react-client/static/js/main.a664b2a5.chunk.js.map",
-    "runtime-main.js": "/blog-react-client/static/js/runtime-main.1b8badf9.js",
-    "runtime-main.js.map": "/blog-react-client/static/js/runtime-main.1b8badf9.js.map",
-    "static/css/2.d41f8da2.chunk.css": "/blog-react-client/static/css/2.d41f8da2.chunk.css",
-    "static/js/2.f0949102.chunk.js": "/blog-react-client/static/js/2.f0949102.chunk.js",
-    "static/js/2.f0949102.chunk.js.map": "/blog-react-client/static/js/2.f0949102.chunk.js.map",
-    "index.html": "/blog-react-client/index.html",
-    "static/css/2.d41f8da2.chunk.css.map": "/blog-react-client/static/css/2.d41f8da2.chunk.css.map",
-    "static/css/main.72d1d98f.chunk.css.map": "/blog-react-client/static/css/main.72d1d98f.chunk.css.map",
-    "static/js/2.f0949102.chunk.js.LICENSE.txt": "/blog-react-client/static/js/2.f0949102.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/blog-react-client/static/media/Jua-Regular.3d6db847.ttf"
+    "main.css": "/static/css/main.563cd06e.chunk.css",
+    "main.js": "/static/js/main.a664b2a5.chunk.js",
+    "main.js.map": "/static/js/main.a664b2a5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e6f5c3f5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e6f5c3f5.js.map",
+    "static/css/2.d41f8da2.chunk.css": "/static/css/2.d41f8da2.chunk.css",
+    "static/js/2.f0949102.chunk.js": "/static/js/2.f0949102.chunk.js",
+    "static/js/2.f0949102.chunk.js.map": "/static/js/2.f0949102.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.d41f8da2.chunk.css.map": "/static/css/2.d41f8da2.chunk.css.map",
+    "static/css/main.563cd06e.chunk.css.map": "/static/css/main.563cd06e.chunk.css.map",
+    "static/js/2.f0949102.chunk.js.LICENSE.txt": "/static/js/2.f0949102.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Jua-Regular.3d6db847.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.1b8badf9.js",
+    "static/js/runtime-main.e6f5c3f5.js",
     "static/css/2.d41f8da2.chunk.css",
     "static/js/2.f0949102.chunk.js",
-    "static/css/main.72d1d98f.chunk.css",
+    "static/css/main.563cd06e.chunk.css",
     "static/js/main.a664b2a5.chunk.js"
   ]
 }
