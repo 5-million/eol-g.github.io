@@ -5,17 +5,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
+import { DOMAIN } from "../../../server-domain";
 import "./sidebar.css";
 
 const Sidebar: React.FC = () => {
   const [categories, setCategories] = useState<string[] | null>(null);
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/category")
-      .then((response: AxiosResponse) => {
-        const data: string[] | null = response?.data;
-        setCategories(data);
-      });
+    axios.get(`${DOMAIN}/category`).then((response: AxiosResponse) => {
+      const data: string[] | null = response?.data;
+      setCategories(data);
+    });
   }, []);
 
   return (

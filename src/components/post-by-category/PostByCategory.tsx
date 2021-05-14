@@ -4,6 +4,7 @@ import { Link, RouteComponentProps } from "react-router-dom";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { DOMAIN } from "../../server-domain";
 import { Posts } from "../../interfaces";
 
 import "../home/home.css";
@@ -20,7 +21,7 @@ const PostByCategory: React.FC<RouteComponentProps<MatchParams>> = ({
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/posts/category?name=${name}`)
+      .get(`${DOMAIN}/posts/category?name=${name}`)
       .then((response: AxiosResponse) => {
         const data: Posts[] | null = response?.data;
         setPosts(data);

@@ -5,6 +5,7 @@ import { Viewer } from "@toast-ui/react-editor";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 
+import { DOMAIN } from "../../server-domain";
 import { PostDetail } from "../../interfaces";
 
 import "codemirror/lib/codemirror.css";
@@ -22,12 +23,10 @@ const Post: React.FC<RouteComponentProps<MatchParams>> = ({ match }) => {
   useEffect(() => {
     if (detail) return;
 
-    axios
-      .get(`http://localhost:8080/posts/${id}`)
-      .then((response: AxiosResponse) => {
-        const data: PostDetail | null = response?.data;
-        if (data) setDetail(data);
-      });
+    axios.get(`${DOMAIN}/posts/${id}`).then((response: AxiosResponse) => {
+      const data: PostDetail | null = response?.data;
+      if (data) setDetail(data);
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

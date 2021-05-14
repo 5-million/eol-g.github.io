@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 
+import { DOMAIN } from "../../server-domain";
 import { Posts } from "../../interfaces";
 
 import "./home.css";
@@ -12,7 +13,7 @@ const Home: React.FC = () => {
   const [posts, setPosts] = useState<Posts[] | null>(null);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/posts").then((response: AxiosResponse) => {
+    axios.get(`${DOMAIN}/posts`).then((response: AxiosResponse) => {
       const data: Posts[] | null = response?.data;
       setPosts(data);
     });
