@@ -1,1 +1,1 @@
-export const DOMAIN = "https://eol-g.ml";
+export const DOMAIN = "https://api.eol-g.ml/blog";
