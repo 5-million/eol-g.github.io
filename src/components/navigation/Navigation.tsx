@@ -8,32 +8,6 @@ import Sidebar from "./sidebar/Sidebar";
 import { openSidebar } from "../../functions";
 
 const Naviagtion: React.FC = () => {
-  // let sidebarIsOpen: boolean = false;
-
-  // const toggleSidebar = () => {
-  //   const sidebarStyle:
-  //     | CSSStyleDeclaration
-  //     | undefined = document.getElementById("sidebar")?.style;
-
-  //   const sidebarOverlayStyle:
-  //     | CSSStyleDeclaration
-  //     | undefined = document.getElementById("sidebar-overlay")?.style;
-
-  //   if (sidebarStyle && sidebarOverlayStyle) {
-  //     if (sidebarIsOpen) {
-  //       sidebarStyle.display = "none";
-  //       sidebarOverlayStyle.display = "none";
-  //       console.log(sidebarStyle.animationName);
-  //     } else {
-  //       sidebarStyle.display = "block";
-  //       sidebarOverlayStyle.display = "block";
-  //       console.log(sidebarStyle.animationName);
-  //     }
-
-  //     sidebarIsOpen = !sidebarIsOpen;
-  //   }
-  // };
-
   useEffect(() => {
     const SIDEBAR_BTN: HTMLElement | null = document.getElementById(
       "sidebar-btn"
@@ -49,7 +23,7 @@ const Naviagtion: React.FC = () => {
             <FontAwesomeIcon className="fa-lg" icon={faBars} id="sidebar-btn" />
           </div>
           <Link to="/" className="blog-title">
-            💻 pooro
+            💻 eol-g
           </Link>
         </div>
       </nav>
